@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="{{url_for('static', filename='vue.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='axios.min.js')}}"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Youtube Search</title>
+</head>
+<body>
+    <b>Simple Youtube Mp3 Downloader</b>
+<div id="app">
+    <form @submit.prevent="handleSubmit">
+        <label>
+            Enter Search Term :
+            <input type="text" v-model="user_input"/>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        <ol>
+            <div v-for="item in response_data">
+                <li>
+                    ${item.snippet.title}
+                </li>
+                <img :src="item.snippet.thumbnails.medium.url">
+                <button :id="item.id.videoId" v-on:click="download_audio($event)">Download Mp3</button>
+
+            </div>
+       </ol>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="{{url_for('static', filename='index1.js')}}"></script>
+</html>
