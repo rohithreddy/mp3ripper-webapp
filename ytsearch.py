@@ -9,7 +9,7 @@ app = Flask(__name__, static_folder="./static", template_folder="./static")
 # TODO https://developers.google.com/youtube/v3/getting-started 
 # you can find instructions here to get a developer key to use youtube data api
 
-devkey="AIzaSyBo8tOc2_oHekRMcZZ5Fxm2waHcx-mp_XM"
+devkey="XXXXXXXXXXXXXXXXXXyoutube-api-keyXXXXX"
 
 ydl_options = {
     'format' : 'bestaudio/best[ext=mp3]',
